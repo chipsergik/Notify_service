@@ -1,0 +1,881 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    min-width: 800px;
+    max-width: 1920px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/*      Header      */
+.header-wrapper {
+    background: #e6f8e5;
+}
+
+.header-content {
+    width: 900px;
+    margin: 0 auto 90px;
+    height: 83px;
+}
+
+    .header-content .slogan {
+        vertical-align: middle;
+        font-size: 12px;
+        padding: 30px 0;
+        margin-left: 18px;
+    }
+
+    .header-content > div {
+        float: left;
+    }
+
+    .header-content .aq {
+        white-space: nowrap;
+        float: right;
+        padding: 25px 0;
+    }
+
+        .header-content .aq strong {
+            float: left;
+            font-weight: 700;
+            color: #fc5658;
+            font-size: 16px;
+            line-height: 35px;
+            margin-right: 6px;
+        }
+
+        .header-content .aq div {
+            float: left;
+        }
+
+            .header-content .aq div:before {
+                content: "";
+                display: block;
+                float: left;
+                width: 2px;
+                height: 35px;
+                background: no-repeat no-repeat center center url('../img/ask-separator.png');
+            }
+
+
+        .header-content .aq a {
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            color: #144e5a;
+            margin: 2px 6px;
+        }
+
+            .header-content .aq a em {
+                font-weight: 700;
+            }
+
+            .header-content .aq a span {
+                color: #000;
+            }
+
+/*      Body        */
+.body-content {
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+    .body-content a {
+        color: #000;
+    }
+
+    .body-content h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+
+/*      Footer      */
+.footer-wrapper {
+    width: 100%;
+    background: #144e5a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    width: 780px;
+    height: 50px;
+    margin: 35px auto;
+    color: #fff;
+}
+
+    .footer-content .copyright {
+        float: left;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .footer-content .footer-block {
+        float: left;
+        width: 33.3333%;
+    }
+
+        .footer-content .footer-block a {
+            color: #fff;
+        }
+
+/*      Common      */
+p {
+    margin: 8px 0;
+}
+
+.btn {
+    font-size: 18px;
+    border: none;
+    background: none;
+    padding: 7px 20px;
+    text-align: center;
+}
+
+    .btn.btn-primary {
+        background: #eb6e0e;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .btn.btn-cancel {
+        background: #e5e5e5;
+        color: #144e5a;
+        font-weight: 400;
+    }
+
+    .btn.btn-info {
+        background: #144e5a;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+    .overlay .overlay-window-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .overlay .overlay-window {
+        width: 420px;
+        margin: 0 auto;
+    }
+
+/*      Index       */
+.index-wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.login-form input[type=text], .login-form input[type=email], .login-form input[type=password],
+.register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
+    padding: 6px 4px;
+    font-size: 12px;
+    width: 240px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
+    width: 100%;
+}
+
+.body-content .login-form, .register-form {
+    float: left;
+    font-size: 12px;
+}
+
+    .body-content .login-form label, .register-form label {
+        display: block;
+        padding: 4px 0;
+    }
+
+        .body-content .login-form label input, .register-form input {
+            display: block;
+            margin: 6px 0;
+        }
+
+    .body-content .login-form input[type=submit] {
+        width: 140px;
+    }
+
+.body-content .register {
+    float: right;
+    font-size: 12px;
+}
+
+.register-form {
+    background: #e6f8e5;
+    width: 100%;
+}
+
+    .register-form form {
+        padding: 0 35px;
+    }
+
+        .register-form form input[type=submit] {
+            margin: 25px auto 42px;
+        }
+
+    .register-form h2 {
+        background: #93ebaa;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 0;
+        margin-bottom: 12px;
+    }
+
+/*      Sensors     */
+
+.tab-navs ul {
+    float: left;
+    border-bottom: 1px solid #a0a0a0;
+    width: 100%;
+}
+
+.clear {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.tab-navs li {
+    float: left;
+}
+
+    .tab-navs li:first-child a {
+        margin-left: 32px;
+    }
+
+    .tab-navs li a {
+        float: left;
+        text-align: center;
+        width: 175px;
+        line-height: 38px;
+        font-size: 18px;
+        text-decoration: none;
+        margin-bottom: -1px;
+        color: #a0a0a0;
+    }
+
+    .tab-navs li.active a {
+        border-left: 1px solid #a0a0a0;
+        border-top: 1px solid #a0a0a0;
+        border-right: 1px solid #a0a0a0;
+        background: #fff;
+        color: #000;
+    }
+
+.tab-content > div {
+    display: none;
+}
+
+    .tab-content > div.active {
+        display: block;
+    }
+
+.actions {
+    margin: 15px 0;
+    text-align: right;
+}
+
+    .actions button {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 35px;
+    }
+
+    .actions .icon.add-icon:before {
+        content: '+';
+        font-size: 24px;
+        font-weight: 700;
+        top: 1px;
+        position: relative;
+    }
+
+
+table.sensors-table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    margin: 0 -1px;
+}
+
+    table.sensors-table td, table.sensors-table th {
+        padding: 12px;
+        background: #eeeeee;
+        border: 2px solid #fff;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+
+        table.sensors-table td.alert {
+            color: #fc5658;
+        }
+
+        table.sensors-table th.sorted {
+            font-weight: 700;
+        }
+
+            table.sensors-table th.sorted.sorted-descending::after {
+                content: " ↓";
+            }
+
+        table.sensors-table td:empty {
+            padding: 1px 0 0;
+        }
+
+    table.sensors-table .actions {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+        table.sensors-table .actions .btn {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0 5px;
+            vertical-align: middle;
+        }
+
+            table.sensors-table .actions .btn.remove-sensor {
+                padding: 0;
+                width: 22px;
+                height: 22px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                background: #eb6e0e url('../img/remove-sensor.png') no-repeat no-repeat center center;
+                margin-right: 8px;
+            }
+
+            table.sensors-table .actions .btn.edit-sensor:before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-image: url('../img/edit.png');
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+
+
+
+/*      Sensor edit     */
+.sensor-edit h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 45px 0;
+}
+
+.sensor-edit {
+}
+
+    .sensor-edit .sensor-parameters {
+        width: 620px;
+        float: left;
+    }
+
+    .sensor-edit .sensor-parameter {
+        width: 100%;
+        background: #eeeeee;
+        height: 60px;
+        padding: 0 22px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        vertical-align: middle;
+        position: relative;
+    }
+
+        .sensor-edit .sensor-parameter .sensor-parameter-name {
+            display: table;
+            height: 100%;
+        }
+
+        .sensor-edit .sensor-parameter span {
+            font-size: 16px;
+            vertical-align: middle;
+            display: table-cell;
+        }
+
+        .sensor-edit .sensor-parameter select {
+            float: right;
+            width: 390px;
+            height: 36px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border: 1px solid #ebebeb;
+            top: 10px;
+            right: 22px;
+            /* vertical-align: top; */
+            position: absolute;
+            font-size: 16px;
+        }
+
+    .sensor-edit .sensor-values {
+        width: 216px;
+        text-align: center;
+        float: right;
+    }
+
+        .sensor-edit .sensor-values .sensor-parameter-name {
+            width: 100%;
+            text-align: center;
+        }
+
+    .sensor-edit h4 {
+        margin-bottom: 10px;
+    }
+
+    .sensor-edit .actions {
+        margin-top: 25px;
+    }
+
+.delete-confirmation {
+    border: 1px solid #144e5a;
+    padding: 16px;
+    width: 350px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 18px;
+}
+
+    .delete-confirmation h2 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .delete-confirmation .actions {
+        text-align: center;
+        margin-bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+        .delete-confirmation .actions .btn {
+            width: 150px;
+        }
+
+            .delete-confirmation .actions .btn + .btn {
+                margin-left: 16px;
+            }
+
+/*      Conditions      */
+.notification {
+    line-height: 36px;
+}
+
+    .notification > div {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+        padding: 0 10px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .notification > div:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+
+        .notification > div > div, .notification > div > h3, .notification-schedule-repeat > div > div, .notification-schedule-repeat > div > h3 {
+            float: left;
+        }
+
+    .notification .notification-value {
+        background: #ffffff;
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+        .notification .notification-value + .notification-value {
+            margin-left: 0;
+        }
+
+    .notification h3:first-child {
+        margin-left: 0;
+    }
+
+    .notification h3 {
+        margin: 0 8px;
+        line-height: 56px;
+    }
+
+.notification-schedule-repeat > div {
+    width: 100%;
+}
+
+.notification-condition {
+    background: #eeeeee;
+}
+
+.notification-then {
+    background: #e6f8e5;
+}
+
+.notification-schedule-repeat {
+    background: #f7f5f5;
+}
+
+.notification + .notification {
+    border-top: 2px solid #959595;
+    margin-top: 14px;
+    padding-top: 14px;
+}
+
+.notification-status-bar {
+    padding-left: 10px;
+}
+
+    .notification-status-bar > div {
+        float: left;
+    }
+
+
+    .notification-status-bar .notification-actions {
+        float: right;
+    }
+
+        .notification-status-bar .notification-actions button {
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            position: relative;
+            background: #e6f8e5 no-repeat no-repeat center center;
+            border: 0;
+        }
+
+            .notification-status-bar .notification-actions button.remove-notification {
+                background-image: url(../img/remove.png);
+            }
+
+            .notification-status-bar .notification-actions button.toggle-notification {
+                background-image: url(../img/toggle.png);
+            }
+
+            .notification-status-bar .notification-actions button.edit-notification {
+                background-image: url(../img/edit.png);
+            }
+
+            .notification-status-bar .notification-actions button:active {
+                top: 1px;
+                border: 0;
+            }
+
+
+    .notification-status-bar .history {
+        margin-left: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+        position: relative;
+    }
+
+        .notification-status-bar .history .history-popup {
+            display: none;
+            z-index: 10;
+            position: absolute;
+            padding: 20px;
+            background: #f7f5f5;
+            width: 340px;
+            left: -50%;
+        }
+
+        .notification-status-bar .history:hover {
+            text-decoration: none;
+        }
+
+            .notification-status-bar .history:hover .history-popup {
+                display: block;
+            }
+
+        .notification-status-bar .history .history-popup > div > div {
+            float: left;
+        }
+
+            .notification-status-bar .history .history-popup > div > div:last-child {
+                float: right;
+            }
+
+/*      Notification edit       */
+
+.notification-edit {
+}
+
+    .notification-edit h2 {
+        background: #e6f8e5;
+        font-size: 22px;
+        font-weight;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 0;
+    }
+
+    .notification-edit h3 {
+        background: #eeeeee;
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+    }
+
+    .notification-edit section {
+        margin-bottom: 10px;
+    }
+
+        .notification-edit section span {
+            font-size: 14px;
+            margin: 0 4px;
+        }
+
+            .notification-edit section span.first-in-line {
+                margin-left: 258px;
+                line-height: 50px;
+                min-width: 50px;
+                display: inline-block;
+            }
+
+        .notification-edit section div.first-in-line {
+            margin-left: 258px;
+        }
+
+        .notification-edit section .week-day-checks label {
+            width: 125px;
+            display: inline-block;
+        }
+
+    .notification-edit select, .notification-edit input, .notification-edit textarea {
+        padding: 4px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 28px;
+    }
+
+        .notification-edit select:nth-child(2) {
+            width: 200px;
+            margin-left: 50px;
+        }
+
+        .notification-edit input.small-input {
+            width: 42px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+    .notification-edit textarea {
+        resize: none;
+        vertical-align: top;
+        width: 260px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 150px;
+    }
+
+    .notification-edit .time {
+        width: 139px;
+    }
+
+    .notification-edit .actions {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    .notification-edit .select-box-with-checks {
+        display: inline-block;
+        width: 200px;
+        position: relative;
+    }
+
+        .notification-edit .select-box-with-checks select {
+            width: 100%;
+        }
+
+        .notification-edit .select-box-with-checks .select-content {
+            position: absolute;
+            width: 100%;
+            padding: 4px;
+            border: 1px solid #a9a9a9;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #fff;
+            margin-top: -1px;
+            display: none;
+            z-index: 11;
+        }
+
+            .notification-edit .select-box-with-checks .select-content.select-content-inline div {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .notification-edit .select-box-with-checks .select-content.select-content-inline label {
+                min-width: 48px;
+            }
+
+
+            .notification-edit .select-box-with-checks .select-content label {
+                display: block;
+            }
+
+        .notification-edit .select-box-with-checks.wide {
+            width: 405px;
+        }
+
+    .notification-edit .notification-if-actions {
+        float: right;
+    }
+
+        .notification-edit .notification-if-actions .btn {
+            width: 24px;
+            height: 24px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            border: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: no-repeat no-repeat center center;
+            display: inline-block;
+            padding: 0;
+            vertical-align: top;
+        }
+
+            .notification-edit .notification-if-actions .btn.btn-add-condition {
+                background-color: #60af6e;
+                color: #fff;
+            }
+
+            .notification-edit .notification-if-actions .btn.btn-remove-condition {
+                background-color: #fc5658;
+                background-image: url('../img/remove-sensor.png');
+            }
+
+    .notification-edit input[type=checkbox], .notification-edit input[type=radio] {
+        height: auto;
+    }
+
+@media screen and (max-width: 1279px) {
+    .header-content {
+        width: 800px;
+    }
+
+    .body-content {
+        width: 800px;
+    }
+
+    .notification-edit select:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .notification-edit textarea {
+        width: 222px;
+    }
+
+    .notification-edit .actions {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .notification-edit section span.first-in-line {
+        margin-left: 218px;
+    }
+
+    .notification-edit section div.first-in-line {
+        margin-left: 218px;
+    }
+
+    .tab-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .header-content {
+        width: 1280px;
+    }
+}

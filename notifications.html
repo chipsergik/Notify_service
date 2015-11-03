@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Netping Notify</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="/img/logo.png" />
+                    </div>
+                    <div class="slogan">
+                        Устройства мониторинга серверных комнат<br />
+                        и удаленного управления электропитанием
+                    </div>
+                    <div class="aq">
+                        <strong>Задать вопрос:</strong>
+                        <div>
+                            <a href="tel:74956468537">тел.: <span><em>+7(495) 646-8537</em></span></a>
+                            <a href="mailto:support@netping.ru">e-mail: <span>support@netping.ru</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-wrapper">
+                <div class="body-content">
+                    <div class="notification-edit">
+                        <h2>Настройка Уведомления</h2>
+                        <section>
+                            <h3>Если</h3>
+                            <select>
+                                <option>Температура на улице</option>
+                                <option>Температура в шкафу</option>
+                                <option>Влажность в шкафу</option>
+                            </select>
+                            <select>
+                                <option>></option>
+                                <option>=</option>
+                                <option><</option>
+                            </select>
+                            <input type="text" class="small-input" />
+                            <div class="notification-if-actions">
+                                <button class="btn btn-add-condition">+</button>
+                                <button class="btn btn-remove-condition"></button>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>То</h3>
+                            <select>
+                                <option>Отправить e-mail</option>
+                                <option>Отправить SMS</option>
+                                <option>Включить сигнализацию</option>
+                            </select>
+                            <select>
+                                <option>support@netping.ru</option>
+                                <option>info@netping.ru</option>
+                            </select>
+                            <input type="text" placeholder="Тема сообщения e-mail" />
+                            <textarea placeholder="Текст уведомления"></textarea>
+                        </section>
+                        <section>
+                            <h3>Расписание</h3>
+                            <select>
+                                <option selected>Однократно</option>
+                                <option>Ежедневно</option>
+                                <option>Еженедельно</option>
+                                <option>Ежемесячно</option>
+                            </select>
+                            <span>
+                                Начать:
+                            </span>
+                            <input type="date" class="datepicker" />
+                            <span>
+                                с:
+                            </span>
+                            <input type="time" class="time" />
+                            <span>
+                                до:
+                            </span>
+                            <input type="time" class="time" />
+                        </section>
+                        <section>
+                            <h3>Расписание</h3>
+                            <select>
+                                <option>Однократно</option>
+                                <option selected>Ежедневно</option>
+                                <option>Еженедельно</option>
+                                <option>Ежемесячно</option>
+                            </select>
+                            <span>
+                                Начать:
+                            </span>
+                            <input type="date" class="datepicker" />
+                            <span>
+                                с:
+                            </span>
+                            <input type="time" class="time" />
+                            <span>
+                                до:
+                            </span>
+                            <input type="time" class="time" />
+                            <br />
+                            <span class="first-in-line">Повторять каждые:</span>
+                            <input type="text" class="small-input" />
+                            <span>дн.</span>
+                        </section>
+                        <section>
+                            <h3>Расписание</h3>
+                            <select>
+                                <option>Однократно</option>
+                                <option>Ежедневно</option>
+                                <option selected>Еженедельно</option>
+                                <option>Ежемесячно</option>
+                            </select>
+                            <span>
+                                Начать:
+                            </span>
+                            <input type="date" class="datepicker" />
+                            <span>
+                                с:
+                            </span>
+                            <input type="time" class="time" />
+                            <span>
+                                до:
+                            </span>
+                            <input type="time" class="time" />
+                            <br />
+                            <span class="first-in-line">Повторять каждую:</span>
+                            <input type="text" class="small-input" />
+                            <span>неделю</span>
+                            <div class="first-in-line week-day-checks">
+                                <label><input type="checkbox" />понедельник</label>
+                                <label><input type="checkbox" />вторник</label>
+                                <label><input type="checkbox" />среда</label>
+                                <label><input type="checkbox" />четверг</label>
+                                <label><input type="checkbox" />пятница</label>
+                                <label><input type="checkbox" />суббота</label>
+                                <label><input type="checkbox" />воскресенье</label>
+
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Расписание</h3>
+                            <select>
+                                <option>Однократно</option>
+                                <option>Ежедневно</option>
+                                <option>Еженедельно</option>
+                                <option selected>Ежемесячно</option>
+                            </select>
+                            <span>
+                                Начать:
+                            </span>
+                            <input type="date" class="datepicker" />
+                            <span>
+                                с:
+                            </span>
+                            <input type="time" class="time" />
+                            <span>
+                                до:
+                            </span>
+                            <input type="time" class="time" />
+                            <br />
+                            <span class="first-in-line">Месяцы:</span>
+                            <div class="select-box-with-checks">
+                                <select></select>
+                                <div class="select-content">
+                                    <label><input type="checkbox" />Выбрать все месяцы</label>
+                                    <label><input type="checkbox" />Январь</label>
+                                    <label><input type="checkbox" />Февраль</label>
+                                    <label><input type="checkbox" />Март</label>
+                                    <label><input type="checkbox" />Апрель</label>
+                                    <label><input type="checkbox" />Май</label>
+                                    <label><input type="checkbox" />Июнь</label>
+                                    <label><input type="checkbox" />Июль</label>
+                                    <label><input type="checkbox" />Август</label>
+                                    <label><input type="checkbox" />Сентябрь</label>
+                                    <label><input type="checkbox" />Октябрь</label>
+                                    <label><input type="checkbox" />Ноябрь</label>
+                                    <label><input type="checkbox" />Декабрь</label>
+                                </div>
+                            </div>
+                            <br />
+                            <span class="first-in-line"><label><input type="radio" checked name="schedule-type" />Дни:</label></span>
+                            <div tabindex="0" class="select-box-with-checks wide">
+                                <select></select>
+                                <div class="select-content select-content-inline">
+                                    <div>
+                                        <label><input type="checkbox" />1</label>
+                                        <label><input type="checkbox" />2</label>
+                                        <label><input type="checkbox" />3</label>
+                                        <label><input type="checkbox" />4</label>
+                                        <label><input type="checkbox" />5</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" />6</label>
+                                        <label><input type="checkbox" />7</label>
+                                        <label><input type="checkbox" />8</label>
+                                        <label><input type="checkbox" />9</label>
+                                        <label><input type="checkbox" />10</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" />11</label>
+                                        <label><input type="checkbox" />12</label>
+                                        <label><input type="checkbox" />13</label>
+                                        <label><input type="checkbox" />14</label>
+                                        <label><input type="checkbox" />15</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" />16</label>
+                                        <label><input type="checkbox" />17</label>
+                                        <label><input type="checkbox" />18</label>
+                                        <label><input type="checkbox" />19</label>
+                                        <label><input type="checkbox" />20</label>
+                                    </div>
+                                    <div>
+
+                                        <label><input type="checkbox" />21</label>
+                                        <label><input type="checkbox" />22</label>
+                                        <label><input type="checkbox" />23</label>
+                                        <label><input type="checkbox" />24</label>
+                                        <label><input type="checkbox" />25</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" />26</label>
+                                        <label><input type="checkbox" />27</label>
+                                        <label><input type="checkbox" />28</label>
+                                        <label><input type="checkbox" />29</label>
+                                        <label><input type="checkbox" />30</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" />31</label>
+                                        <label><input type="checkbox" />послед.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <span class="first-in-line"><label><input type="radio" name="schedule-type" />В:</label></span>
+                            <div class="select-box-with-checks">
+                                <select></select>
+                                <div class="select-content">
+                                    <label><input type="checkbox" />1</label>
+                                    <label><input type="checkbox" />2</label>
+                                    <label><input type="checkbox" />3</label>
+                                    <label><input type="checkbox" />4</label>
+                                    <label><input type="checkbox" />Посл.</label>
+                                </div>
+                            </div>
+                            <div class="select-box-with-checks">
+                                <select></select>
+                                <div class="select-content">
+                                    <label><input type="checkbox" />Выбрать все дни</label>
+                                    <label><input type="checkbox" />понедельник</label>
+                                    <label><input type="checkbox" />вторник</label>
+                                    <label><input type="checkbox" />среда</label>
+                                    <label><input type="checkbox" />четверг</label>
+                                    <label><input type="checkbox" />пятница</label>
+                                    <label><input type="checkbox" />суббота</label>
+                                    <label><input type="checkbox" />воскресенье</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Повторы</h3>
+                            <select>
+                                <option>Не повторять</option>
+                                <option>Каждые 5 минут</option>
+                                <option>Каждые 10 минут</option>
+                                <option>Каждые 30 минут</option>
+                                <option>Каждые час</option>
+                                <option>Свой интервал</option>
+                            </select>
+                            <span>В течение</span>
+                            <select>
+                                <option>Бесконечно</option>
+                                <option>15 мин.</option>
+                                <option>30 мин.</option>
+                                <option>1 час</option>
+                                <option>12 часов</option>
+                                <option>1 день</option>
+                                <option>Свой интервал</option>
+                            </select>
+                            <input type="text" class="small-input" />
+                        </section>
+                        <div class="actions">
+                            <input type="submit" class="btn btn-info" value="Сохранить настройки" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="copyright">
+                        © 2015 Netping
+                    </div>
+                    <div class="footer-block"><a href="#">Конфиденциальность</a></div>
+                    <div class="footer-block"><a href="#">Публичная оферта</a></div>
+                    <div class="footer-block"><a href="#">Персональные данные</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
