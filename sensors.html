@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Netping Notify</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="/img/logo.png" />
+                    </div>
+                    <div class="slogan">
+                        Устройства мониторинга серверных комнат<br />
+                        и удаленного управления электропитанием
+                    </div>
+                    <div class="aq">
+                        <strong>Задать вопрос:</strong>
+                        <div>
+                            <a href="tel:74956468537">тел.: <span><em>+7(495) 646-8537</em></span></a>
+                            <a href="mailto:support@netping.ru">e-mail: <span>support@netping.ru</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-wrapper">
+                <div class="body-content">
+                    <div class="tabs">
+                        <div class="tab-navs">
+                            <ul>
+                                <li class="active"><a href="#sensors">Датчики</a></li>
+                                <li><a href="#notifications">Уведомления</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="tab-content">
+                            <div id="sensors" class="active">
+                                <div class="actions">
+                                    <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить датчик</button>
+                                </div>
+                                <table class="sensors-table">
+                                    <tr>
+                                        <th>IP-адрес</th>
+                                        <th class="sorted sorted-descending">Название датчика</th>
+                                        <th>Значение</th>
+                                        <th>Время, Дата последнего использования</th>
+                                        <th>Управление датчиком</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>89.146.83.215</td>
+                                        <td>Датчик разбития стекла</td>
+                                        <td class="alert">Тревога</td>
+                                        <td>13:23 31 Августа 2015 г.</td>
+                                        <td class="actions">
+                                            <button class="btn btn-primary remove-sensor"></button>
+                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>89.146.83.215</td>
+                                        <td>Датчик разбития стекла</td>
+                                        <td>Ок</td>
+                                        <td>13:23 31 Августа 2015 г.</td>
+                                        <td class="actions">
+                                            <button class="btn btn-primary remove-sensor"></button>
+                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="sensor-edit">
+
+                                    <h2>Редактирование датчика разбития стекла</h2>
+
+                                    <div class="sensor-parameters">
+                                        <h4>&nbsp;</h4>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>IP-адреc</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    127.0.0.1
+                                                </option>
+                                                <option>
+                                                    192.168.1.1
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Тип датчика<br />(Enterprise OID)</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Значение датчика<br />(Varbind OID)</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="sensor-values" style="display: none;">
+                                        <h4>Значение датчика</h4>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="actions">
+                                        <button class="btn btn-primary">Завершить редактирование</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="notifications">
+                                <div class="actions">
+                                    <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить уведомление</button>
+                                </div>
+                                <div class="notification">
+                                    <div class="notification-condition">
+                                        <h3>Если</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                        <h3>И</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                    </div>
+                                    <div class="notification-then">
+                                        <h3>То</h3>
+                                        <div class="notification-value">
+                                            Отправить e-mail на support@netping.ru
+                                        </div>
+                                        <div class="notification-value">
+                                            Тема: Срабатывание датчика
+                                        </div>
+                                    </div>
+                                    <div class="notification-schedule-repeat">
+                                        <div class="notification-schedule">
+                                            <h3>Расписание</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Однократно
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-repeat">
+                                            <h3>Повторения</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                            <h3>В течение</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <section class="notification-status-bar">
+                                        <div>
+                                            Создано: <span class="create-date">6.09.2015</span> Сработало: <span class="last-fired">13:46 8.10.2015</span>
+                                        </div>
+                                        <div class="history">
+                                            История срабатывания
+                                            <div class="history-popup">
+                                                <div>
+                                                    <div>13:46 8.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                                <div>
+                                                    <div>13:46 8.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                                <div>
+                                                    <div>13:46 28.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-actions">
+                                            <button class="remove-notification"></button>
+                                            <button class="toggle-notification"></button>
+                                            <button class="edit-notification"></button>
+                                        </div>
+                                    </section>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="notification">
+                                    <div class="notification-condition">
+                                        <h3>Если</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                        <h3>И</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                    </div>
+                                    <div class="notification-then">
+                                        <h3>То</h3>
+                                        <div class="notification-value">
+                                            Отправить e-mail на support@netping.ru
+                                        </div>
+                                        <div class="notification-value">
+                                            Тема: Срабатывание датчика
+                                        </div>
+                                    </div>
+                                    <div class="notification-schedule-repeat">
+                                        <div class="notification-schedule">
+                                            <h3>Расписание</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Однократно
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-repeat">
+                                            <h3>Повторения</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                            <h3>В течение</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <section class="notification-status-bar">
+                                        <div>
+                                            Создано: <span class="create-date">6.09.2015</span> Сработало: <span class="last-fired">13:46 8.10.2015</span>
+                                        </div>
+                                        <div class="history">
+                                            История срабатывания
+                                            <div class="history-popup">
+                                                <div>
+                                                    <div>13:46 8.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                                <div>
+                                                    <div>13:46 8.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                                <div>
+                                                    <div>13:46 28.10.2015</div>
+                                                    <div>Отпр. support@netping.ru</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-actions">
+                                            <button class="remove-notification"></button>
+                                            <button class="toggle-notification"></button>
+                                            <button class="edit-notification"></button>
+                                        </div>
+                                    </section>
+                                    <div class="clear"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="copyright">
+                        © 2015 Netping
+                    </div>
+                    <div class="footer-block"><a href="#">Конфиденциальность</a></div>
+                    <div class="footer-block"><a href="#">Публичная оферта</a></div>
+                    <div class="footer-block"><a href="#">Персональные данные</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" style="display:none;">
+        <div class="overlay-window-wrapper">
+            <div class="overlay-window">
+                <div class="delete-confirmation">
+                    <h2>
+                        Подтверждение удаления
+                    </h2>
+                    <form>
+                        <p>
+                            Вы действительно хотите удалить
+                        </p>
+                        <p>
+                            Датчик разбития стекла?
+                        </p>
+                        <p class="actions">
+                            <br /><input type="submit" value="Удалить" class="btn btn-info" /><button class="btn btn-cancel">Отмена</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
