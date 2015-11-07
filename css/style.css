@@ -175,6 +175,14 @@ html, body {
         width: 33.3333%;
     }
 
+        .footer-content .footer-block:nth-child(3) {
+            text-align: center;
+        }
+
+        .footer-content .footer-block:last-child {
+            text-align: right;
+        }
+
         .footer-content .footer-block a {
             color: #fff;
         }
@@ -368,7 +376,7 @@ p {
 
 
 table.sensors-table {
-    /* width: 100%; */
+    width: 100%;
     border-collapse: collapse;
     margin: 0 -1px;
 }
@@ -387,6 +395,7 @@ table.sensors-table {
 
         table.sensors-table th.sorted {
             font-weight: 700;
+            white-space: nowrap;
         }
 
             table.sensors-table th.sorted.sorted-descending::after {
@@ -400,6 +409,7 @@ table.sensors-table {
     table.sensors-table .actions {
         margin: 0;
         white-space: nowrap;
+        text-align: center;
     }
 
         table.sensors-table .actions .btn {
@@ -577,10 +587,19 @@ table.sensors-table {
         margin-left: 0;
     }
 
-    .notification h3 {
-        margin: 0 8px;
-        line-height: 56px;
-    }
+.notification-condition h3:first-child, .notification-then h3:first-child {
+    width: 30px;
+}
+
+.notification-schedule h3:first-child, .notification-repeat h3:first-child {
+    width: 80px;
+}
+
+
+.notification h3 {
+    margin: 0 8px;
+    line-height: 56px;
+}
 
 .notification-schedule-repeat > div {
     width: 100%;
@@ -682,6 +701,10 @@ table.sensors-table {
 .notification-edit {
 }
 
+    .notification-edit input, .notification-edit select {
+        border: 1px solid #a9a9a9;
+    }
+
     .notification-edit h2 {
         background: #e6f8e5;
         font-size: 22px;
@@ -700,28 +723,37 @@ table.sensors-table {
 
     .notification-edit section {
         margin-bottom: 10px;
+        white-space: nowrap;
     }
 
-        .notification-edit section span {
-            font-size: 14px;
-            margin: 0 4px;
-        }
+    .notification-edit .datepicker {
+        margin-left: 10px;
+    }
 
-            .notification-edit section span.first-in-line {
-                margin-left: 258px;
-                line-height: 50px;
-                min-width: 50px;
-                display: inline-block;
-            }
+    .notification-edit section .week-day-checks {
+        white-space: normal;
+    }
 
-        .notification-edit section div.first-in-line {
+    .notification-edit section span {
+        font-size: 14px;
+        margin: 0 4px;
+    }
+
+        .notification-edit section span.first-in-line {
             margin-left: 258px;
-        }
-
-        .notification-edit section .week-day-checks label {
-            width: 125px;
+            line-height: 50px;
+            min-width: 60px;
             display: inline-block;
         }
+
+    .notification-edit section div.first-in-line {
+        margin-left: 258px;
+    }
+
+    .notification-edit section .week-day-checks label {
+        width: 125px;
+        display: inline-block;
+    }
 
     .notification-edit select, .notification-edit input, .notification-edit textarea {
         padding: 4px 10px;
@@ -742,6 +774,9 @@ table.sensors-table {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: right;
         }
 
     .notification-edit textarea {
@@ -750,10 +785,6 @@ table.sensors-table {
         width: 260px;
         font-family: Arial, Helvetica, sans-serif;
         height: 150px;
-    }
-
-    .notification-edit .time {
-        width: 139px;
     }
 
     .notification-edit .actions {
@@ -767,9 +798,26 @@ table.sensors-table {
         position: relative;
     }
 
-        .notification-edit .select-box-with-checks select {
+        .notification-edit .select-box-with-checks .select-box {
+            border: 1px solid #a9a9a9;
             width: 100%;
+            height: 28px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            vertical-align: middle;
+            display: inline-block;
         }
+
+            .notification-edit .select-box-with-checks .select-box:after {
+                content: "▼";
+                right: 5px;
+                line-height: 28px;
+                font-size: 10px;
+                position: relative;
+                float: right;
+            }
+
 
         .notification-edit .select-box-with-checks .select-content {
             position: absolute;
@@ -871,6 +919,10 @@ table.sensors-table {
 
     .tab-content {
         padding: 0 10px;
+    }
+
+    table.sensors-table td, table.sensors-table th {
+        padding: 12px 4px;
     }
 }
 

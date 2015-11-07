@@ -4,7 +4,13 @@
     <meta charset="utf-8" />
     <title>Netping Notify</title>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="css/timepicki.css" rel="stylesheet" />
+    <script src="js/datepicker-ru.js"></script>
+    <script src="js/timepicki.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -74,15 +80,15 @@
                             <span>
                                 Начать:
                             </span>
-                            <input type="date" class="datepicker" />
+                            <input type="text" class="datepicker" />
                             <span>
                                 с:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <span>
                                 до:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                         </section>
                         <section>
                             <h3>Расписание</h3>
@@ -95,15 +101,15 @@
                             <span>
                                 Начать:
                             </span>
-                            <input type="date" class="datepicker" />
+                            <input type="text" class="datepicker" />
                             <span>
                                 с:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <span>
                                 до:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <br />
                             <span class="first-in-line">Повторять каждые:</span>
                             <input type="text" class="small-input" />
@@ -120,15 +126,15 @@
                             <span>
                                 Начать:
                             </span>
-                            <input type="date" class="datepicker" />
+                            <input type="text" class="datepicker" />
                             <span>
                                 с:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <span>
                                 до:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <br />
                             <span class="first-in-line">Повторять каждую:</span>
                             <input type="text" class="small-input" />
@@ -155,19 +161,19 @@
                             <span>
                                 Начать:
                             </span>
-                            <input type="date" class="datepicker" />
+                            <input type="text" class="datepicker" />
                             <span>
                                 с:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="timepicker" class="timepicker" />
                             <span>
                                 до:
                             </span>
-                            <input type="time" class="time" />
+                            <input type="text" class="timepicker" />
                             <br />
                             <span class="first-in-line">Месяцы:</span>
                             <div class="select-box-with-checks">
-                                <select></select>
+                                <div class="select-box"></div>
                                 <div class="select-content">
                                     <label><input type="checkbox" />Выбрать все месяцы</label>
                                     <label><input type="checkbox" />Январь</label>
@@ -187,7 +193,7 @@
                             <br />
                             <span class="first-in-line"><label><input type="radio" checked name="schedule-type" />Дни:</label></span>
                             <div tabindex="0" class="select-box-with-checks wide">
-                                <select></select>
+                                <div class="select-box"></div>
                                 <div class="select-content select-content-inline">
                                     <div>
                                         <label><input type="checkbox" />1</label>
@@ -241,7 +247,7 @@
                             <br />
                             <span class="first-in-line"><label><input type="radio" name="schedule-type" />В:</label></span>
                             <div class="select-box-with-checks">
-                                <select></select>
+                                <div class="select-box"></div>
                                 <div class="select-content">
                                     <label><input type="checkbox" />1</label>
                                     <label><input type="checkbox" />2</label>
@@ -251,7 +257,7 @@
                                 </div>
                             </div>
                             <div class="select-box-with-checks">
-                                <select></select>
+                                <div class="select-box"></div>
                                 <div class="select-content">
                                     <label><input type="checkbox" />Выбрать все дни</label>
                                     <label><input type="checkbox" />понедельник</label>
