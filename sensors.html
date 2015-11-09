@@ -39,46 +39,48 @@
                         <div class="clear"></div>
                         <div class="tab-content">
                             <div id="sensors" class="active">
-                                <div class="actions">
-                                    <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить датчик</button>
+                                <div class="sensors-container">
+                                    <div class="actions">
+                                        <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить датчик</button>
+                                    </div>
+                                    <table class="sensors-table">
+                                        <tr>
+                                            <th>IP-адрес</th>
+                                            <th class="sorted sorted-descending">Название датчика</th>
+                                            <th>Значение</th>
+                                            <th>Время, Дата<br /> последнего использования</th>
+                                            <th>Управление датчиком</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>89.146.83.215</td>
+                                            <td>Датчик разбития стекла</td>
+                                            <td class="alert">Тревога</td>
+                                            <td>13:23 31 Августа 2015 г.</td>
+                                            <td class="actions">
+                                                <button class="btn btn-primary remove-sensor"></button>
+                                                <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>89.146.83.215</td>
+                                            <td>Датчик разбития стекла</td>
+                                            <td>Ок</td>
+                                            <td>13:23 31 Августа 2015 г.</td>
+                                            <td class="actions">
+                                                <button class="btn btn-primary remove-sensor"></button>
+                                                <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <table class="sensors-table">
-                                    <tr>
-                                        <th>IP-адрес</th>
-                                        <th class="sorted sorted-descending">Название датчика</th>
-                                        <th>Значение</th>
-                                        <th>Время, Дата последнего использования</th>
-                                        <th>Управление датчиком</th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>89.146.83.215</td>
-                                        <td>Датчик разбития стекла</td>
-                                        <td class="alert">Тревога</td>
-                                        <td>13:23 31 Августа 2015 г.</td>
-                                        <td class="actions">
-                                            <button class="btn btn-primary remove-sensor"></button>
-                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>89.146.83.215</td>
-                                        <td>Датчик разбития стекла</td>
-                                        <td>Ок</td>
-                                        <td>13:23 31 Августа 2015 г.</td>
-                                        <td class="actions">
-                                            <button class="btn btn-primary remove-sensor"></button>
-                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="sensor-edit">
+                                <div class="sensor-edit" style="display:none;">
 
                                     <h2>Редактирование датчика разбития стекла</h2>
 
