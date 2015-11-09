@@ -38,13 +38,26 @@
 
     $('.select-box-with-checks .select-box').on('click', function (e) {
         e.preventDefault();
-        $(this).siblings('.select-content').toggle();
+        var $content = $(this).siblings('.select-content');
+        if ($content.is(':visible')) {
+            $content.hide();
+        }
+        else {
+            $('.select-content').hide();
+            $content.show();
+        }
     })
 
+    $('input,select').on('click, focus', function () {
+        $('.select-content').hide();
+    });
+
+    $('.select-content input, .select-content').off('click, focus');
+
     $('.datepicker').datepicker($.datepicker.regional["ru"],
-        {
-            dateFormat: 'dd.mm.yy'
-        });
+    {
+        dateFormat: 'dd.mm.yy'
+    });
 
     $('.timepicker').timepicki({
         show_meridian: false,
@@ -55,7 +68,4 @@
         increase_direction: 'up',
     });
 
-    //$('.select-box-with-checks').on('blur', function () {
-    //    $(this).find('.select-content').hide();
-    //});
 });
